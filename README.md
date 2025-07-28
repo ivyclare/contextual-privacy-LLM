@@ -27,14 +27,16 @@ Our first implementation addresses a common issue at the user-to-agent boundary:
 
 ## Overview of the Method
 
-######  Protecting Users From Themselves: Safeguarding Contextual Privacy in Interactions with Conversational Agents
+####  Protecting Users From Themselves: Safeguarding Contextual Privacy in Interactions with Conversational Agents
 [![Read Paper](https://img.shields.io/badge/Read%20Paper-PDF-yellow)](https://aclanthology.org/2025.findings-acl.1343.pdf) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1wiRkvZcPk4w9XuPcr6jxQ5rGqR6zJitb?usp=sharing) [![PyPI - Version](https://img.shields.io/pypi/v/contextual-privacy-llm)](https://pypi.org/project/contextual-privacy-llm/)
 
 As conversational agents (e.g., LLMs) become more embedded in our daily lives, users increasingly reveal sensitive personal details—often unknowingly. Once shared, this information is vulnerable to memorization, misuse, third-party exposure, and incorporation into future model training. To mitigate this, we introduce a locally-deployable privacy guard that operates between users and LLMs. It identifies out-of-context private information and guides the user in reformulating prompts that maintain their goals while reducing unnecessary disclosure.
 
 Inspired by the theory of Contextual Integrity, our framework goes beyond standard PII redaction by evaluating whether the shared information is contextually appropriate and necessary for achieving the user’s intent.
 
-![Framework overview](img/framework_overview.png)
+<p align="center">
+  <img src="img/framework_overview.png" width="400"/>
+</p>
 
 ---
 
