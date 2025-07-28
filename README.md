@@ -1,25 +1,34 @@
-<div align="center">  
+<!-- <div align="center">  
   <h1>  Contextual Privacy Toolkit </h1>
 
-</div>
+</div> -->
+
+# Contextual Privacy Toolkit
 
 The Contextual Privacy Toolkit provides a foundation for implementing contextual privacy in AI systems, with a focus on minimizing unnecessary data exposure while maintaining helpful and personalized interactions.
 
 This toolkit is part of a broader effort to support **privacy-aware agentic workflows** — where decisions about what information to share are guided by the context and purpose of a task, not just static rules about sensitive data.
 
-Our first implementation addresses a common issue at the user-to-agent boundary: overdisclosure, where users unknowingly share private details that may not be necessary to accomplish their goal. The toolkit introduces a lightweight privacy layer that analyzes user input, detects contextually unnecessary details, and reformulates prompts to preserve intent while minimizing disclosure. [More details below...]
-
-<div align="center">  
-  <h2>Protecting Users From Themselves: Safeguarding Contextual Privacy in Interactions with Conversational Agents</h2>
-
-📘[Read Paper](https://arxiv.org/pdf/2502.18509)   |   ✏️[Colab Quickstart](https://colab.research.google.com/drive/1wiRkvZcPk4w9XuPcr6jxQ5rGqR6zJitb?usp=sharing)   |   💼 [PyPI Package](https://pypi.org/project/contextual-privacy-llm/)
-
-Ivoline Ngong, Swanand Kadhe, Hao Wang, Keerthiram Murugesan, Justin D. Weisz, Amit Dhurandhar, Karthikeyan Natesan Ramamurthy
-</div>
+Our first implementation addresses a common issue at the user-to-agent boundary: overdisclosure, where users unknowingly share private details that may not be necessary to accomplish their goal. The toolkit introduces a lightweight privacy layer that analyzes user input, detects contextually unnecessary details, and reformulates prompts to preserve intent while minimizing disclosure.
 
 ---
 
-## Overview
+<!-- ## Method Implemented -->
+
+
+
+<!-- <div align="center">  
+  <h2>Protecting Users From Themselves: Safeguarding Contextual Privacy in Interactions with Conversational Agents</h2>
+
+📘[Read Paper](https://arxiv.org/pdf/2502.18509)   |   ✏️[Colab Quickstart](https://colab.research.google.com/drive/1wiRkvZcPk4w9XuPcr6jxQ5rGqR6zJitb?usp=sharing)   |   💼 [PyPI Package](https://pypi.org/project/contextual-privacy-llm/) -->
+
+
+<!-- </div> -->
+
+## Overview of the Method
+
+####  Protecting Users From Themselves: Safeguarding Contextual Privacy in Interactions with Conversational Agents
+[![Read Paper](https://img.shields.io/badge/Read%20Paper-PDF-yellow)](https://aclanthology.org/2025.findings-acl.1343.pdf) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1wiRkvZcPk4w9XuPcr6jxQ5rGqR6zJitb?usp=sharing) [![PyPI - Version](https://img.shields.io/pypi/v/contextual-privacy-llm)](https://pypi.org/project/contextual-privacy-llm/)
 
 As conversational agents (e.g., LLMs) become more embedded in our daily lives, users increasingly reveal sensitive personal details—often unknowingly. Once shared, this information is vulnerable to memorization, misuse, third-party exposure, and incorporation into future model training. To mitigate this, we introduce a locally-deployable privacy guard that operates between users and LLMs. It identifies out-of-context private information and guides the user in reformulating prompts that maintain their goals while reducing unnecessary disclosure.
 
@@ -34,9 +43,9 @@ Inspired by the theory of Contextual Integrity, our framework goes beyond standa
 ## This Toolkit
 
 This package allows you to:
-    •   Understand Context: Detect the intent and task behind each user query to establish the privacy-relevant context.
-    •   Identify Sensitive Info: Highlight details in the prompt that may be essential (relevant) or non-essential (unnecessary) for the intended goal.
-    •   Reformulate Prompts: Remove or rephrase out-of-context information while preserving user intent.
+    •   **Understand Context:** Detect the intent and task behind each user query to establish the privacy-relevant context.
+    •   **Identify Sensitive Info:** Highlight details in the prompt that may be essential (relevant) or non-essential (unnecessary) for the intended goal.
+    •   **Reformulate Prompts:** Remove or rephrase out-of-context information while preserving user intent.
 
 All steps run locally, using small models that make real-time use feasible on the user side.
 
@@ -212,11 +221,22 @@ Note: Prompt templates (llama, deepseek, mixtral) may require tuning for other m
 If you use this work in your research, please cite:
 
 ```
-@article{ngong2025protecting,
-  title={Protecting users from themselves: Safeguarding contextual privacy in interactions with conversational agents},
-  author={Ngong, Ivoline and Kadhe, Swanand and Wang, Hao and Murugesan, Keerthiram and Weisz, Justin D and Dhurandhar, Amit and Natesan Ramamurthy, Karthikeyan},
-  journal={arXiv preprint arXiv:2502.18509},
-  year={2025}
+@inproceedings{ngong-etal-2025-protecting,
+    title = {Protecting Users From Themselves: Safeguarding Contextual Privacy in Interactions with Conversational Agents},
+    author = {Ngong, Ivoline C.  and
+      Kadhe, Swanand Ravindra  and
+      Wang, Hao  and
+      Murugesan, Keerthiram  and
+      Weisz, Justin D.  and
+      Dhurandhar, Amit  and
+      Natesan Ramamurthy, Karthikeyan},
+    booktitle = {Findings of the Association for Computational Linguistics: ACL 2025},
+    month = jul,
+    year = "2025",
+    address = {Vienna, Austria},
+    publisher = {Association for Computational Linguistics},
+    url = {https://aclanthology.org/2025.findings-acl.1343/},
+    pages = {26196--26220},
 }
 ```
 
